@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Light Switch</title>
+</head>
+
+<body>
+    <img id="bulb" src="bulb-off-icon-14.jpg" alt="Light bulb" width="100" />
+    <button id="switch">Turn On</button>
+
+    <script>
+        const bulb = document.getElementById("bulb");
+        const button = document.getElementById("switch");
+        bulb.style.width = "320px";
+        bulb.style.height = "350px";
+        button.addEventListener("click", function() {
+            if (button.innerText === "Turn On") {
+                bulb.src = "bulb on.png";
+                button.innerText = "Turn Off";
+            } else {
+                bulb.src = "bulb-off-icon-14.jpg";
+                button.innerText = "Turn On";
+            }
+        });
+    </script>
+</body>
+
+</html>
